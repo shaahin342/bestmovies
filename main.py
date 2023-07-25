@@ -13,3 +13,7 @@ movie_titles = [movie.getText() for movie in all_movies][::-1]
 with open(file="movies.txt", mode="w", encoding="utf-8") as file:
     for movie in movie_titles:
         file.write(f"{movie}\n")
+
+with open(file="movies.txt", mode="r", encoding="utf-8") as file:
+    movies = file.readlines()
+    print(movies)
